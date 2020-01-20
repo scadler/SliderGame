@@ -22,3 +22,6 @@ p{
     height:25px;
     mix-blend-mode: multiply;
 }
+body{
+    background-color: #000000
+}
