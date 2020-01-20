@@ -22,24 +22,31 @@ setInterval(function(){
     if(obj.collision === false){
     var row = Math.floor(Math.random()*10)+1
     var speed = (Math.floor(Math.random()*14)+1)+15
-    var image = Math.floor(Math.random()*3)+1
+    var image = Math.floor(Math.random()*4)+1
     if(image === 1){
         image = "https://i.imgur.com/gBYpE7D.gif"
+        color = "normal"
     }
     else if(image === 2){
         image = "https://i.imgur.com/fz0XQg8.gif"
+        color = "normal";
+    }
+    else if(image === 3){
+        image = "https://i.imgur.com/QkCs7l2.gif"
+        color = "orange";
     }
     else{
         image = "https://i.imgur.com/9aw0c4f.gif"
+        color = "normal"
     }
     if($("#div"+row).contents().hasClass('torpedo')=== false){
-    $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
+    $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg ${color}" id="img${row}" src=${image}> </marquee>`);
     }
     else{
         var x = $("#img"+row).offset().left
         if(x <= -35){
             $("#torpedo"+row).remove();
-            $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
+            $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg ${color}" id="img${row}" src=${image}> </marquee>`);
         }
     }
 }

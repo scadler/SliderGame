@@ -18,9 +18,15 @@ p{
 }
 .torpedoImg{
     background-color: gray;
-    width:50px;
-    height:25px;
     mix-blend-mode: multiply;
+}
+.normal{
+    width: 50px;
+    height: 25px;
+}
+.orange{
+    width:25px;
+    height:50px;
 }
 body{
     background-color: #000000
