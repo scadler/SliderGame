@@ -1,12 +1,12 @@
 #ship{
-    height: 50px;
-    width: 50px;
+    height: 15%;
+    width: 15%;
     background-color: #000000;
     position:absolute;
 }
 #spaceship{
-    height: 50px;
-    width: 50px;
+    height: 100%;
+    width: 100%;
 }
 p{
     color: #FFFFFF;
@@ -19,4 +19,6 @@ p{
 .torpedoImg{
     background-color: gray;
     width:50px;
+    height:25px;
+    mix-blend-mode: multiply;
 }

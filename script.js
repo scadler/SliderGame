@@ -8,7 +8,7 @@ $(document).mousemove(function(e){
     $mouseX = e.pageX;
     $mouseY = e.pageY;    
 });
-
+//https://i.imgur.com/DcUDVfU.gif
 var $loop = setInterval(function(){
 if(obj.collision === false){
 // change 12 to alter damping higher is slower
@@ -22,14 +22,24 @@ setInterval(function(){
     if(obj.collision === false){
     var row = Math.floor(Math.random()*10)+1
     var speed = (Math.floor(Math.random()*14)+1)+15
+    var image = Math.floor(Math.random()*3)+1
+    if(image === 1){
+        image = "https://i.imgur.com/gBYpE7D.gif"
+    }
+    else if(image === 2){
+        image = "https://i.imgur.com/fz0XQg8.gif"
+    }
+    else{
+        image = "https://i.imgur.com/9aw0c4f.gif"
+    }
     if($("#div"+row).contents().hasClass('torpedo')=== false){
-    $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><p class="torpedoImg" id="img${row}"> torpedo</p> </marquee>`);
+    $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
     }
     else{
         var x = $("#img"+row).offset().left
         if(x <= -35){
             $("#torpedo"+row).remove();
-            $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><p class="torpedoImg" id="img${row}"> torpedo</p> </marquee>`);
+            $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
         }
     }
 }
