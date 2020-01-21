@@ -30,15 +30,15 @@ setInterval(function() {
                 color="normal";
             }
             else if(image===2) {
-                image="https://i.imgur.com/fz0XQg8.gif";
+                image="https://i.imgur.com/fz0XQg8.gif"
                 color="normal";
             }
             else if(image===3) {
-                image="https://imgur.com/QJOQJuK.gif";
+                image="https://imgur.com/QJOQJuK.gif"
                 color="normal";
             }
             else {
-                image="https://i.imgur.com/9aw0c4f.gif";
+                image="https://i.imgur.com/9aw0c4f.gif"
                 color="normal";
             }
             if($("#div"+row).contents().hasClass('torpedo')===false) {
@@ -72,8 +72,8 @@ setInterval(function() {
             img=document.getElementById("img8");
             collisionDetect(img, 8); 
             img=document.getElementById("img9");
-            collisionDetect(img, 9); i
-            mg=document.getElementById("img10");
+            collisionDetect(img, 9); 
+            img=document.getElementById("img10");
             collisionDetect(img, 10);
         }
     }, 50);
