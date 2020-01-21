@@ -1,6 +1,7 @@
 var $mouseX = 0, $mouseY = 0;
 var $xp = 0, $yp =0;
 var counter = 0;
+$("#spaceshipExploded").hide();
 var obj = {
     collision: false,
 }
@@ -32,7 +33,7 @@ setInterval(function(){
         color = "normal";
     }
     else if(image === 3){
-        image = "https://i.imgur.com/QkCs7l2.gif"
+        image = "https://imgur.com/QJOQJuK.gif"
         color = "orange";
     }
     else{
@@ -40,13 +41,13 @@ setInterval(function(){
         color = "normal"
     }
     if($("#div"+row).contents().hasClass('torpedo')=== false){
-    $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg ${color}" id="img${row}" src=${image}> </marquee>`);
+    $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
     }
     else{
         var x = $("#img"+row).offset().left
-        if(x <= -35){
+        if(x <= -20){
             $("#torpedo"+row).remove();
-            $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg ${color}" id="img${row}" src=${image}> </marquee>`);
+            $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
         }
     }
 }
@@ -95,7 +96,14 @@ function collisionDetect(img, i){
         // torpedo8.stop(true, true);
         // torpedo9.stop(true, true);
         // torpedo10.stop(true, true);
+
         obj.collision = true;
+        $("#spaceship").hide();
+        $("#spaceshipExploded").show();
   }
+  var x = $("#img"+i).offset().left
+        if(x <= -20){
+            $("#torpedo"+i).remove();
+        }
     }
 }

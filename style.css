@@ -8,6 +8,10 @@
     height: 100%;
     width: 100%;
 }
+#spaceshipExploded{
+    height: 100%;
+    width: 100%;
+}
 p{
     color: #FFFFFF;
 }
@@ -19,6 +23,8 @@ p{
 .torpedoImg{
     background-color: gray;
     mix-blend-mode: multiply;
+    width: 50px;
+    height: 25px;
 }
 .normal{
     width: 50px;
