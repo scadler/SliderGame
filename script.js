@@ -15,8 +15,8 @@ $(document).mousemove(function(e) {
 var $loop=setInterval(function() {
         if(obj.collision===false) {
             // change 12 to alter damping higher is slower
-            $xp +=(($mouseX - $xp - 45)/20);
-            $yp +=(($mouseY - $yp - 30)/20);
+            $xp +=(($mouseX - $xp - ($("#spaceship").width()/2))/20);
+            $yp +=(($mouseY - $yp - ($("#spaceship").height()/2))/20);
             $("#ship").css({left:$xp +'px', top:$yp +'px'});
         }
     }, 30);
