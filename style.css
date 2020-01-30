@@ -4,6 +4,10 @@
     background-color: #000000;
     position:absolute;
 }
+#image{
+    height:300px;
+    width:800px;
+}
 #spaceship{
     height: 100%;
     width: 100%;
@@ -12,7 +16,7 @@
     height: 100%;
     width: 100%;
 }
-p{
+#ship{
     color: #FFFFFF;
 }
 .div{
@@ -22,7 +26,6 @@ p{
 }
 .torpedoImg{
     background-color: gray;
-    mix-blend-mode: multiply;
     width: 50px;
     height: 25px;
 }
@@ -33,3 +36,5 @@ p{
 body{
     background-color: #000000
 }
+/* #gameRestart{
+} */

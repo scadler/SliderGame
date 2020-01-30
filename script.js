@@ -3,9 +3,11 @@ $mouseY=0;
 var $xp=0,
 $yp=0;
 var counter=0;
+a=0
 $("#spaceshipExploded").hide();
 var obj= {
     collision: false,
+    score: 0,
 }
 $(document).mousemove(function(e) {
         $mouseX=e.pageX;
@@ -44,14 +46,16 @@ setInterval(function() {
             if($("#div"+row).contents().hasClass('torpedo')===false) {
                 $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}"src=${image}> </marquee>`);
             }
-            else {
+            else{
                 var x=$("#img"+row).offset().left;
-                 if(x <=-20) {
+                if(x <=-20) {
                     $("#torpedo"+row).remove();
                     $("#div"+row).append(`<marquee class="torpedo" id="torpedo${row}" loop="1" scrollamount=${speed}><img class="torpedoImg" id="img${row}" src=${image}> </marquee>`);
+                    obj.score = obj.score +1;
                 }
             }
         }
+        console.log(obj.score)
     } , 300);
      setInterval(function() {
         if(obj.collision===false) {
@@ -87,9 +91,10 @@ setInterval(function() {
             $("#spaceship").hide();
             $("#spaceshipExploded").show();
         }
-        var x=$("#img"+i).offset().left;
-         if(x <=-20) {
-             $("#torpedo"+i).remove();
-        }
     }
 }
+$("#gameRestart").click(function(){
+    obj.collision=false;
+    $("#spaceship").show();
+    $("#spaceshipExploded").hide();
+});
