@@ -1,13 +1,10 @@
 #ship{
-    height: 15%;
-    width: 15%;
+    height: 10%;
+    width: 10%;
     background-color: #000000;
     position:absolute;
 }
-#image{
-    height:300px;
-    width:800px;
-}
+
 #spaceship{
     height: 100%;
     width: 100%;
