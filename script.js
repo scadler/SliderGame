@@ -16,7 +16,7 @@ $(document).mousemove(function(e) {
 );
 var $loop=setInterval(function() {
         if(obj.collision===false) {
-            // change 12 to alter damping higher is slower
+            // higher # = slower tracking
             $xp +=(($mouseX - $xp - ($("#spaceship").width()/2))/20);
             $yp +=(($mouseY - $yp - ($("#spaceship").height()/2))/20);
             $("#ship").css({left:$xp +'px', top:$yp +'px'});
@@ -25,7 +25,7 @@ var $loop=setInterval(function() {
 setInterval(function() {
         if(obj.collision===false) {
             var row=Math.floor(Math.random()*10)+1;
-             var speed=(Math.floor(Math.random()*20)+1)+15;
+             var speed=(Math.floor(Math.random()*30)+1)+20;
               var image=Math.floor(Math.random()*4)+1;
                if(image===1) {
                 image="https://i.imgur.com/gBYpE7D.gif"
@@ -93,7 +93,7 @@ setInterval(function() {
         }
     }
 }
-$("#gameRestart").click(function(){
+$("body").click(function(){
     obj.collision=false;
     $("#spaceship").show();
     $("#spaceshipExploded").hide();
