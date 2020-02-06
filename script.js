@@ -56,7 +56,7 @@ setInterval(function() {
             }
         }
         console.log(obj.score)
-    } , 300);
+    } , 150);
      setInterval(function() {
         if(obj.collision===false) {
             var img=document.getElementById("img1");
