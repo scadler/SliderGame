@@ -25,7 +25,7 @@ var $loop=setInterval(function() {
 setInterval(function() {
         if(obj.collision===false) {
             var row=Math.floor(Math.random()*20)+1;
-             var speed=(Math.floor(Math.random()*30)+1)+40;
+             var speed=(Math.floor(Math.random()*35)+1)+50;
               var image=Math.floor(Math.random()*4)+1;
                if(image===1) {
                 image="https://i.imgur.com/gBYpE7D.gif"
