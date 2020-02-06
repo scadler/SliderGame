@@ -24,7 +24,7 @@ var $loop=setInterval(function() {
     }, 30);
 setInterval(function() {
         if(obj.collision===false) {
-            var row=Math.floor(Math.random()*10)+1;
+            var row=Math.floor(Math.random()*20)+1;
              var speed=(Math.floor(Math.random()*30)+1)+40;
               var image=Math.floor(Math.random()*4)+1;
                if(image===1) {
@@ -79,6 +79,26 @@ setInterval(function() {
             collisionDetect(img, 9); 
             img=document.getElementById("img10");
             collisionDetect(img, 10);
+            img=document.getElementById("img11");
+            collisionDetect(img, 11); 
+            img=document.getElementById("img12");
+            collisionDetect(img, 12); 
+            img=document.getElementById("img13");
+            collisionDetect(img, 13); 
+            img=document.getElementById("img14");
+            collisionDetect(img, 14); 
+            img=document.getElementById("img15");
+            collisionDetect(img, 15); 
+            img=document.getElementById("img16");
+            collisionDetect(img, 16); 
+            img=document.getElementById("img17");
+            collisionDetect(img, 17); 
+            img=document.getElementById("img18");
+            collisionDetect(img, 18); 
+            img=document.getElementById("img19");
+            collisionDetect(img, 19); 
+            img=document.getElementById("img20");
+            collisionDetect(img, 20);
         }
     }, 50);
     function collisionDetect(img, i) {
